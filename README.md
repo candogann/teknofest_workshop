@@ -117,3 +117,9 @@ Artık, belirlediğiniz sürede sürekli olarak lambda fonksiyonunuz otomatik bi
 ## Aşama 3: Gerçek bir uygulama.
 
 Bu aşamada, size gerçek bir uygulama örneği göstereceğiz. Bizim seçtiğimiz uygulama, otomatik mail modülü.
+
+@TODO: Mail modülü cloudwatch'a uygun şekilde düzenlenerek buraya eklenecek.
+
+## Son olarak: Nereden devam edelim?
+
+@TODO: buraya IAM rolleri, EC2 makineleri ve API gateway başta olmak üzere bir takım kaynaklar koyulacak.
