@@ -163,5 +163,6 @@ Bulut teknolojileri büyük teknolojiler ve öğrenecek çok şey var. İnternet
 Maillerime sürekli bakıyorum, bunun dışında linkedin'den de ulaşabilirsiniz.
 
 Mail: candogann02@gmail.com
+
 Linkedin: linkedin.com/in/ali-can-dogan/
 
