@@ -2,7 +2,7 @@
 
 - Bir AWS Bulut Hesabı
 
-Hesap oluşturmak için https://portal.aws.amazon.com/billing/signup#/start/email adresine gidip, bilgilerinizi girebilirsiniz.
+Hesap oluşturmak için [bu](https://portal.aws.amazon.com/billing/signup#/start/email) adrese gidip, bilgilerinizi girebilirsiniz.
 Hesabı oluştururken bir adet kredi kartı, sanal kart veya banka kartı isteyecektir. İçinde 1-3 dolar arası bir para bulunan bir sanal kart tanımlamanız yeterli olacaktır(Ininal veya Papara büyük olasılıkla çalışıyordur).
 
 
@@ -41,13 +41,13 @@ Keywords: "Serverless Architecture"
 
 Sunucusuz(Serverless) sistemler/mimari, herhangi bir alt yapı yönetmek zorunda olmadan(donanımsal ve genellikle yazılımsal), uygulamaları ve kodları çalıştırabildiğimiz yapılardır. Sunucusuz desek dahi, teknik olarak hala bir sunucu altyapısı ile çalışıyor, ancak bizim yönetmemizi gerektiren hiçbir şey yok. Her şey servis sağlayıcısı tarafından otomatik ve sistematik bir şekilde yönetiliyor.
 Sunucusuz mimari ile uygulamaları, alt yapıyı dert etmeden geliştirebiliyoruz. Tabii yine bize getirilen bazı kısıtlamalar olabiliyor, ancak bütün yapılar kısıtlamalara sahiptir. Genel olarak bu kısıtlamalar ve faydaları karşılaştırıp en iyi yapıları bulmak ve kurmak, geliştirmenin en önemli parçası denilebilir.
-Daha detaylı bilgi için, https://aws.amazon.com/tr/lambda/serverless-architectures-learn-more/ linkinden whitepaper'ı indirebilirsiniz.
+Daha detaylı bilgi için, [bu](https://aws.amazon.com/tr/lambda/serverless-architectures-learn-more/) linkten whitepaper'ı indirebilirsiniz.
 
 # Aşamalar
 
 ## Aşama 1: Bir lambda fonksiyonu oluşturmak.
 
-- AWS[https://aws.amazon.com/tr/] hesabınıza giriş yapın. Yukarıda bulunan arama kutucuğuna "Lambda" yazarak, lambda fonksiyonlarınızın olduğu bir konsola ulaşacaksınız.
+- [AWS](https://aws.amazon.com/tr/) hesabınıza giriş yapın. Yukarıda bulunan arama kutucuğuna "Lambda" yazarak, lambda fonksiyonlarınızın olduğu bir konsola ulaşacaksınız.
 
 - Konsolda, "Create Function" butonuna tıklayın.
 
@@ -72,7 +72,7 @@ Advanced settings'te, şimdilik dokunmamızı gerektiren bir durum yok. Create f
 
 Fonksiyonunuzun kodu, şu şekilde olmalı:
 
-`
+```python
 import json
 
 def lambda_handler(event, context):
@@ -81,11 +81,39 @@ def lambda_handler(event, context):
         'statusCode': 200,
         'body': json.dumps('Hello from Lambda!')
     }
-`
+    
+```
 
 Bunu fırsat bilerek, lambda konusunda bir konuya açıklık getirmek istiyorum. Lambda, temelde bir API gibi çalışır, yani bir istek attığınızda, size bir cevap verir.
 Bu durumda; test butonuna tıkladığınızda veyahut bir şekilde fonksiyonu tetiklediğinizde, standart bir IDE'den farklı olarak, hata mesajları veya sonuçların aksine, sadece bir 'statusCode' ve bir 'body' döndürür. Uygulamanın çalışma sırasında çıkardığı logları(günlüğü), Cloudwatch Logs üzerinden görebilirsiniz. Bu loglara erişmenin en kolay yolu, lambda fonksiyonunuzun konsolunda, "Code", "Test"... şeklinde giden menüde Monitor'a tıklayıp, "Cloudwatch Logs"'a tıklamaktır. Çıkan sayfada, uygulamanızın bütün çalıştığı zamanda konsola verdiği veya gizli olarak tuttuğu logları görebilirsiniz.
 
-- Hazır olan kod ile ilk testimizi yapmak için, Testing menüsüne gelin. Test ismi kısmını doldurun. 
+- Hazır olan kod ile ilk testimizi yapmak için, Testing menüsüne gelin. Test ismi kısmını doldurun.
+
+AWS Lambda, tetikleyici ile ilgili bilgileri event objesi ile alır, bu durumda tetikleyicimiz Lambda'nın "Test" modülü, ve test event'imizin içeriğini de, aşağıdaki JSON kısmını doldurarak yapabiliyoruz. Şu anlık bir değişiklik yapmadan Test'e tıklayın.
+
+Bu işlemin sonucunda, "Execution result: succeeded" almalısınız.
+
+Tebrikler, artık çalışan bir lambda fonksiyonuna sahipsiniz.
+
+## Ekstra Aşama: Lambda fonksiyonunu otomatik tetikleme
+
+Bu aşama zorunlu değil, ama ben göstermek istediğim için göstereceğim. Öncelikle biraz ön bilgi ile başlayalım.
+
+AWS Lambda, yukarda bahsettiğmiz üzere bir "API" mantığında çalışıyor. Buna dayanarak şunu söyleyebiliriz: fonksiyonu her zaman tetikleyen(trigger) bir eylem olmalı ve bu eyleme geri dönen bir sonuç olmalı. Bu eylem API Gateway aracılığı ile gelen HTTP isteği, veya cloudwatch events(AWS'nin zaman ayarlı tetikleyicisi) ile gelen istekler olabilir. Bu isteklerin kendilerine has bir yapısı vardır ve bu isteklere, AWS Lambda'nın bir cevap göndermesi gerekir. Eğer bir "return" komutu eklenmezse, sizin ayarlarınızda belirlediğiniz zaman aşımına uğrayana kadar çalışacaktır.
+
+Bu aşamada, tetikleyicilerin en kolayı olan cloudwatch events'i göstereceğim.
+
+- AWS konsolunun arama kutucuğuna, cloudwatch yazın.
+- Solda bir menünüzün olması gerek, "Events" sekmesi altında "Rules" butonuna tıklayın.
+- Gelen sayfada, Create rule'a tıklayın. Event source bölümünün altında, "Schedule" kutucuğunu işaretleyin.
+
+Burada, 2 farklı şekilde ayarlama yapabilirsiniz. Genel olarak bütün sistemlerde kullanılabilen "cron expressions" ile, veya üstte kendiniz kutucukla seçerek. Cron expressions hakkında daha çok şey öğrenmnek için [bu]() linke tıklayabilirsiniz. Benim de tavsiyem cron expressions kullanmanızdır.
+
+- Sağ tarafta Add target'e tıklayın. Lambda fonksiyonunuzu seçin. İşlemleriniz bittikten sonra "Configure Details" ile sonraki sayfaya geçip, kuralınızın ismini ve açıklamasını yazarak oluşturma işlemini tamamlayabilirsiniz.
 
 
+Artık, belirlediğiniz sürede sürekli olarak lambda fonksiyonunuz otomatik bir şekilde tetiklenecek.
+
+## Aşama 3: Gerçek bir uygulama.
+
+Bu aşamada, size gerçek bir uygulama örneği göstereceğiz. Bizim seçtiğimiz uygulama, otomatik mail modülü.
