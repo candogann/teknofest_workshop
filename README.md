@@ -21,11 +21,9 @@ Workshop'un referans demosu, google'ın mail servislerini kullanıyor. Farklı m
 
 # Ön Bilgi: 
 
-Bu metinin en altında, ingilizce anahtar kelimeler bulunmakta. Bu anahtar kelimeleri internet üzerinden "what is **" şeklinde aratırsanız, genel olarak bu repoda ve workshopta anlatılan konular hakkında çok daha detaylı bilgiye ulaşabilirsiniz. 
 
 ## Bulut Sistemleri, On-Prem Sistemler ve Sunucusuz Sistemler
 
-Keywords: "Serverless Architecture", "on-prem systems", "cloud services".
 
 Eskiden neredeyse her şey, fiziksel olarak bakılması ve sürdürülmesi gereken fiziksel sunuculara bağlıydı. Neredeyse her şirket, kendi içinde sunucular almak ve bunlar için ortam, insan gücü ve zaman harcaması gerekiyordu.
 Son zamanlarda, artık bulut sistemlerine geçilmeye başlandı. Hala on-premise sunucular(Kurum içi sunucular, on-prem diye bahsedeceğiz.) kullanılsa da, artık çoğu zaman AWS gibi bulut servisi sağlayıcılarına yöneliyoruz.
@@ -36,8 +34,6 @@ Bu workshopta, size bulut sistemlerinin ve sunucusuz sistemlerin nasıl çalış
 
 
 ## Sunucusuz Sistemler Nedir
-
-Keywords: "Serverless Architecture"
 
 Sunucusuz(Serverless) sistemler/mimari, herhangi bir alt yapı yönetmek zorunda olmadan(donanımsal ve genellikle yazılımsal), uygulamaları ve kodları çalıştırabildiğimiz yapılardır. Sunucusuz desek dahi, teknik olarak hala bir sunucu altyapısı ile çalışıyor, ancak bizim yönetmemizi gerektiren hiçbir şey yok. Her şey servis sağlayıcısı tarafından otomatik ve sistematik bir şekilde yönetiliyor.
 Sunucusuz mimari ile uygulamaları, alt yapıyı dert etmeden geliştirebiliyoruz. Tabii yine bize getirilen bazı kısıtlamalar olabiliyor, ancak bütün yapılar kısıtlamalara sahiptir. Genel olarak bu kısıtlamalar ve faydaları karşılaştırıp en iyi yapıları bulmak ve kurmak, geliştirmenin en önemli parçası denilebilir.
