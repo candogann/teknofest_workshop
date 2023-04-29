@@ -149,7 +149,7 @@ Eğer ki data ve obje tutma konuları üzerinde servislere ihtiyacınız varsa; 
 
 ## Kritik Konu: Faturalandırmalar ve Ücret ödeme
 
-AWS, oldukça fazla miktarda servise ev sahipliği yapıyor. Ancak bütün servisler belli bir ücret alıyor. Örneğin bir NAT ağı oluşturmanız ve unutmanız durumunda, aylık 50 dolar'a varacak ücretler ödemeniz istenebilir. Eğer ki bir üründe kullanmayıp unuttuğunuz bir servis var ise, amazon desteğe yazmanız durumunda "Good will refund" dedikleri iade işlemini gerçekleştireceklerdir. Eğer ki hesabınızdan para çekilemeyecek durumdaysa(banka kartı veya sanal kart durumunda), belli bir süre para çekilememsinin ardından hesabınız kapatılacaktır. Aklınızda bulunsun.
+AWS, oldukça fazla miktarda servise ev sahipliği yapıyor. Birçok servisin ücretsiz bir kullanım süresi veya "free-tier" versiyonu bulunsa da, büyük bir kısmı da belli bir ücret alıyor. Örneğin bir NAT ağı oluşturmanız ve unutmanız durumunda, aylık 50 dolar'a varacak ücretler ödemeniz istenebilir. Eğer ki bir üründe kullanmayıp unuttuğunuz bir servis var ise, amazon desteğe yazmanız durumunda "Good will refund" dedikleri iade işlemini gerçekleştireceklerdir. Eğer ki hesabınızdan para çekilemeyecek durumdaysa(banka kartı veya sanal kart durumunda), belli bir süre para çekilememsinin ardından hesabınız kapatılacaktır. Aklınızda bulunsun.
 
 Bir şeyleri unutma konusunda herkesin bir anısı vardır. Bu konuda canınızı sıkmayın. Bana da farklı bir bulut sağlayıcısında 150 dolarlık fatura kesildi, desteğe yazdığınızda çözüyorlar.
 
