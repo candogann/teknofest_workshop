@@ -118,8 +118,7 @@ Artık, belirlediğiniz sürede sürekli olarak lambda fonksiyonunuz otomatik bi
 
 Bu aşamada, size gerçek bir uygulama örneği göstereceğiz. Bizim seçtiğimiz uygulama, otomatik mail modülü.
 
-@TODO: Mail modülü cloudwatch'a uygun şekilde düzenlenerek buraya eklenecek.
-
-## Son olarak: Nereden devam edelim?
-
-@TODO: buraya IAM rolleri, EC2 makineleri ve API gateway başta olmak üzere bir takım kaynaklar koyulacak.
+Bu workshop'un klasöründe, app.py adında bir uygulama bulunmakta. Kodun içeriği büyük ölçüde dökümente edilmiş ve anlatılmış durumdadır. Daha detaylı bilgi için interneti araştırabilirsiniz, bol bol kaynak mevcut. 
+- Bu uygulamanın kaynak kodunun tamamını kopyalayıp, lambda fonksiyonunda IDE kısmına yapıştırın.
+- Kaynak kodunu inceleyin, boş bırakılmış ve sizin bilgileriniz ile doldurulması gereken kısımları doldurun.(Email ve uygulama şifresi olmak üzere.)
+- 
