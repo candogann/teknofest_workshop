@@ -50,6 +50,8 @@ Daha detaylı bilgi için, [bu](https://aws.amazon.com/tr/lambda/serverless-arch
 
 - [AWS](https://aws.amazon.com/tr/) hesabınıza giriş yapın. Yukarıda bulunan arama kutucuğuna "Lambda" yazarak, lambda fonksiyonlarınızın olduğu bir konsola ulaşacaksınız.
 
+[lambda1](https://imgur.com/rIN1StC)
+
 - Konsolda, "Create Function" butonuna tıklayın.
 
 Burada 3 farklı yol ile fonksiyon oluştabileceğinizi göreceksiniz. 
@@ -67,11 +69,15 @@ Architecture olarak x86_64 veya arm64 arasında bu uygulama bazında fark olmama
 
 Advanced settings'te, şimdilik dokunmamızı gerektiren bir durum yok. Create function butonuna basarak, fonksiyonunuzu oluşturabilirsiniz.
 
+![lambda2](https://imgur.com/2cnloEa)
+
 ## Aşama 2: Hello world!
 
 - Lambda fonksiyonumuzu oluşturduk, eğer ki yukardaki adımları izlediyseniz, lambda sizin için otomatik bir "Hello from Lambda!" döndüren bir fonksiyon oluşturdu.
 
 Fonksiyonunuzun kodu, şu şekilde olmalı:
+
+![lambda3](https://i.imgur.com/dIQxzzk)
 
 ```python
 import json
@@ -106,12 +112,16 @@ Bu aşamada, tetikleyicilerin en kolayı olan cloudwatch events'i göstereceğim
 
 - AWS konsolunun arama kutucuğuna, cloudwatch yazın.
 - Solda bir menünüzün olması gerek, "Events" sekmesi altında "Rules" butonuna tıklayın.
+
+![cloudwatch1](https://i.imgur.com/aGffCbe)
+
 - Gelen sayfada, Create rule'a tıklayın. Event source bölümünün altında, "Schedule" kutucuğunu işaretleyin.
 
 Burada, 2 farklı şekilde ayarlama yapabilirsiniz. Genel olarak bütün sistemlerde kullanılabilen "cron expressions" ile, veya üstte kendiniz kutucukla seçerek. Cron expressions hakkında daha çok şey öğrenmnek için [bu]() linke tıklayabilirsiniz. Benim de tavsiyem cron expressions kullanmanızdır.
 
 - Sağ tarafta Add target'e tıklayın. Lambda fonksiyonunuzu seçin. İşlemleriniz bittikten sonra "Configure Details" ile sonraki sayfaya geçip, kuralınızın ismini ve açıklamasını yazarak oluşturma işlemini tamamlayabilirsiniz.
 
+![cloudwatch2](https://i.imgur.com/ANVgmZa)
 
 Artık, belirlediğiniz sürede sürekli olarak lambda fonksiyonunuz otomatik bir şekilde tetiklenecek.
 
@@ -126,6 +136,10 @@ Bu workshop'un klasöründe, app.py adında bir uygulama bulunmakta. Kodun içer
 
 Az önceki test ekranına dönün, test eventinizin json formatında olması gerekmekte.
 Örnek bir json dosyası, aşağıda mevcut.
+
+![lambda3](https://i.imgur.com/QERGXW0 lambda3)
+
+
 ```json
 
 {
