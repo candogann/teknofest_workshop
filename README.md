@@ -33,6 +33,11 @@ Bu workshopta, size bulut sistemlerinin ve sunucusuz sistemlerin nasıl çalış
 
 
 
+![Eski Yol: On-prem Sistemler](https://blog.neuvector.com/hs-fs/hubfs/NeuVector_Folder/Images/serverless1.png?width=714&name=serverless1.png "On-prem-1")
+Yukarda daha eski bir yol olan on-prem sistemin şemasını görebilirsiniz.
+
+![Daha yeni yol: Sunucusuz ve Bulut Sistem](https://blog.neuvector.com/hs-fs/hubfs/NeuVector_Folder/Images/serverless3.png?width=714&name=serverless3.png "Logo Title Text 1")
+Bu ise, AWS ekosistemini kullanan bir sistem.
 ## Sunucusuz Sistemler Nedir
 
 Sunucusuz(Serverless) sistemler/mimari, herhangi bir alt yapı yönetmek zorunda olmadan(donanımsal ve genellikle yazılımsal), uygulamaları ve kodları çalıştırabildiğimiz yapılardır. Sunucusuz desek dahi, teknik olarak hala bir sunucu altyapısı ile çalışıyor, ancak bizim yönetmemizi gerektiren hiçbir şey yok. Her şey servis sağlayıcısı tarafından otomatik ve sistematik bir şekilde yönetiliyor.
@@ -161,4 +166,9 @@ Maillerime sürekli bakıyorum, bunun dışında linkedin'den de ulaşabilirsini
 Mail: candogann02@gmail.com
 
 Linkedin: linkedin.com/in/ali-can-dogan/
+
+
+# Resim Kaynakları
+
+[On-prem ve serverless şeması](https://blog.neuvector.com/article/why-serverless)
 
