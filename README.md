@@ -121,4 +121,47 @@ Bu aşamada, size gerçek bir uygulama örneği göstereceğiz. Bizim seçtiğim
 Bu workshop'un klasöründe, app.py adında bir uygulama bulunmakta. Kodun içeriği büyük ölçüde dökümente edilmiş ve anlatılmış durumdadır. Daha detaylı bilgi için interneti araştırabilirsiniz, bol bol kaynak mevcut. 
 - Bu uygulamanın kaynak kodunun tamamını kopyalayıp, lambda fonksiyonunda IDE kısmına yapıştırın.
 - Kaynak kodunu inceleyin, boş bırakılmış ve sizin bilgileriniz ile doldurulması gereken kısımları doldurun.(Email ve uygulama şifresi olmak üzere.)
-- 
+- İşlemleriniz bittiği zaman, test etme zamanı geldi.
+
+Az önceki test ekranına dönün, test eventinizin json formatında olması gerekmekte.
+Örnek bir json dosyası, aşağıda mevcut.
+```json
+
+{
+  "mailSubject": "Test Mail",
+  "mailContents": "TestMail",
+  "mailList": "ulworddev@gmail.com"
+}
+
+```
+
+Mailcontents aslında bir html girdisi. Oraya eğer ki bir HTML girdisi girerseniz, Sonuç olarak gelen mailiniz html çıktısı şeklinde gözükecektir.
+
+## Ekstra: Şimdi ne yapmalı?
+
+AWS çok büyük bir ekosisteme sahip. Bu ekosistemdeki bütün araçları kullanmak imkansıza yakın olsa da, nereden devam edebileceğiniz konusunda yol gösterebiliriz.
+
+Eğer ki lambda fonksiyonları ve sunucusuz sistemler üzerine çalışmaya devam edecekseniz, API Gateway üzerine çalışarak, API servisleri hakkında araştırmalar yapabilirsiniz. API gateway, şahsen benim en önemli gördüğüm araçlardan bir tanesi.
+
+Eğer ki web sitesi ayağa kaldırma, yürürlükte tutma gibi konular üzerine çalışmak istiyorsanız; Elastic Beanstalk servisine göz atabilirsiniz. Otomize katlanabilirlik, load balancing gibi özelliklere sahip. Hayatınızı kolaylaştıracaktır.
+
+Eğer ki data ve obje tutma konuları üzerinde servislere ihtiyacınız varsa; data için DynamoDB, objeler için S3 Bucket servislerini araştırabilirsiniz.
+
+## Kritik Konu: Faturalandırmalar ve Ücret ödeme
+
+AWS, oldukça fazla miktarda servise ev sahipliği yapıyor. Ancak bütün servisler belli bir ücret alıyor. Örneğin bir NAT ağı oluşturmanız ve unutmanız durumunda, aylık 50 dolar'a varacak ücretler ödemeniz istenebilir. Eğer ki bir üründe kullanmayıp unuttuğunuz bir servis var ise, amazon desteğe yazmanız durumunda "Good will refund" dedikleri iade işlemini gerçekleştireceklerdir. Eğer ki hesabınızdan para çekilemeyecek durumdaysa(banka kartı veya sanal kart durumunda), belli bir süre para çekilememsinin ardından hesabınız kapatılacaktır. Aklınızda bulunsun.
+
+Bir şeyleri unutma konusunda herkesin bir anısı vardır. Bu konuda canınızı sıkmayın. Bana da farklı bir bulut sağlayıcısında 150 dolarlık fatura kesildi, desteğe yazdığınızda çözüyorlar.
+
+# Son Söz
+
+Bulut teknolojileri büyük teknolojiler ve öğrenecek çok şey var. İnternet çağındayız, her konuda bilgiye ulaşmak çok kolay. Bu özellikle bulut sistemleri ve AWS için geçerli. Okumaktan, araştırmaktan vazgeçmeyin!
+
+
+# Bana ulaşmak için;
+
+Maillerime sürekli bakıyorum, bunun dışında linkedin'den de ulaşabilirsiniz.
+
+Mail: candogann02@gmail.com
+Linkedin: linkedin.com/in/ali-can-dogan/
+
