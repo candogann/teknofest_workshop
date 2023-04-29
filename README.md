@@ -14,9 +14,9 @@ Spesifik olarak bu workshop için ihtiyacınız olmasa da, bir adet kodlama orta
 
 Bu workshopta kodlamalarımızı Python ile yapacağız, referans demomuz da Python ile yazıldı.
 
-- Bir adet Gmail hesabı.
+- Bir adet 2FA'e sahip Gmail hesabı.
 
-Workshop'un referans demosu, google'ın mail servislerini kullanıyor. Farklı mail sağlayıcıları için, farklı sunucu adresleri ve portlar bulunmakta, farklı güvenlik protokolleri bulunmakta.
+Workshop'un referans demosu, google'ın mail servislerini kullanıyor. Farklı mail sağlayıcıları için, farklı sunucu adresleri ve portlar bulunmakta, farklı güvenlik protokolleri bulunmakta. 2FA, uygulama şifresi almanız için zorunlu bir durum.
 
 
 # Ön Bilgi: 
